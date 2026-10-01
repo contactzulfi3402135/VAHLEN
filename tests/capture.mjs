@@ -1,0 +1,34 @@
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+import { mkdir, writeFile } from 'node:fs/promises';
+
+await mkdir('docs/screenshots', { recursive: true });
+const browser = await chromium.launch({ headless: true });
+const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+const page = await context.newPage();
+const issues = [];
+page.on('pageerror', error => issues.push(`Page: ${error.message}`));
+page.on('console', message => { if (message.type() === 'error') issues.push(`Console: ${message.text()}`); });
+page.on('response', response => { if (response.status() >= 400) issues.push(`HTTP ${response.status()}: ${response.url()}`); });
+await page.emulateMedia({ reducedMotion: 'reduce' });
+await page.goto('http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
+await page.evaluate(async () => {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(image => { image.loading = 'eager'; return image.decode().catch(() => {}); }));
+});
+await page.screenshot({ path: 'docs/screenshots/desktop-cover.png' });
+await page.screenshot({ path: 'docs/screenshots/desktop-full.png', fullPage: true });
+await page.locator('#commission').screenshot({ path: 'docs/screenshots/commission-desktop.png' });
+console.log('Desktop:', await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth, height: document.documentElement.scrollHeight })));
+const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
+await writeFile('docs/accessibility-report.json', JSON.stringify({ standard: 'Automated axe / WCAG 2.1 AA', checkedAt: new Date().toISOString(), violations: axe.violations }, null, 2));
+console.log('Accessibility:', axe.violations.map(violation => ({ id: violation.id, nodes: violation.nodes.map(node => node.target) })));
+await page.setViewportSize({ width: 390, height: 844 });
+await page.evaluate(() => window.scrollTo(0, 0));
+await page.screenshot({ path: 'docs/screenshots/mobile-cover.png' });
+await page.screenshot({ path: 'docs/screenshots/mobile-full.png', fullPage: true });
+console.log('Mobile:', await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth, height: document.documentElement.scrollHeight })));
+console.log('Runtime issues:', issues);
+console.log('FX:', await page.locator('.footer-fx').innerText());
+await writeFile('docs/runtime-check.json', JSON.stringify({ issues, fx: await page.locator('.footer-fx').innerText() }, null, 2));
+await browser.close();

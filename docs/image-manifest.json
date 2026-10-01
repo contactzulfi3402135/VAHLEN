@@ -1,0 +1,66 @@
+[
+  {
+    "filename": "artisan-portrait.jpg",
+    "width": 1200,
+    "height": 800,
+    "bytes": 255479,
+    "sha256": "1920a4de3287dac282983529a3362e68969cdee9b3dfe7d84612c2a138a3e48c",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "hero-chronometre.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 513712,
+    "sha256": "8d535423deeaf76618f6919e1502143767229d89061cb3ec6acaa224929a5c5b",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "leather-craft.jpg",
+    "width": 1200,
+    "height": 800,
+    "bytes": 252860,
+    "sha256": "264e39938a50b81460fa8c07e02005e3710766572d9c43061f631544901a2cd5",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "movement-detail.jpg",
+    "width": 1200,
+    "height": 800,
+    "bytes": 275757,
+    "sha256": "02952288e6fbd297830a76e4260784f129b5c66eb866569620e5f770b97d3736",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "product-chrono-slate.jpg",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 257740,
+    "sha256": "38f613647d1f352ca0971dba124dd3c0c8248024993b689a6119ee60195e4d86",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "product-folio.jpg",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 292936,
+    "sha256": "18ab867acd1ecfe5319261e2b1dacc9e1e0171d8dcc3c8c927d17fbd85977822",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "product-tourbillon.jpg",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 392824,
+    "sha256": "64ee448bb300f51e85b68d04175a068c912624c4f1d91f92e92eca510dc1707c",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  },
+  {
+    "filename": "product-valise.jpg",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 275554,
+    "sha256": "3b20d407ff8ba7f132686741b9c94fc1fcc5ae1f79106c6edeefd2f40dc7af73",
+    "source": "Custom AI-generated editorial photography; final JPEG resized to delivery dimensions."
+  }
+]

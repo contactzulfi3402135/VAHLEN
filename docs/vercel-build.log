@@ -1,0 +1,37 @@
+v22.23.3
+
+> atelier-vahlen@1.0.0 verify:assets
+> node scripts/verify-assets.mjs
+
+✓ hero-chronometre.jpg — 1920 × 1080 — 502 KB
+✓ movement-detail.jpg — 1200 × 800 — 269 KB
+✓ leather-craft.jpg — 1200 × 800 — 247 KB
+✓ product-chrono-slate.jpg — 1000 × 1000 — 252 KB
+✓ product-tourbillon.jpg — 1000 × 1000 — 384 KB
+✓ product-valise.jpg — 1000 × 1000 — 269 KB
+✓ product-folio.jpg — 1000 × 1000 — 286 KB
+✓ artisan-portrait.jpg — 1200 × 800 — 249 KB
+All eight custom production photographs are present and verified.
+
+> atelier-vahlen@1.0.0 lint
+> eslint .
+
+
+> atelier-vahlen@1.0.0 test
+> vitest run --reporter=json --outputFile=docs/unit-results.json
+
+JSON report written to /home/user/atelier-vahlen-vercel/docs/unit-results.json
+
+> atelier-vahlen@1.0.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 1601 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.31 kB │ gzip:  0.58 kB
+dist/assets/index-BnPfQ1B9.css   78.94 kB │ gzip: 15.45 kB
+dist/assets/index-DxKhHqdP.js   304.20 kB │ gzip: 94.55 kB
+✓ built in 3.42s
+found 0 vulnerabilities

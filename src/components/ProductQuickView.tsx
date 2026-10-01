@@ -1,0 +1,12 @@
+import { useState } from 'react';
+import { ArrowRight, ChevronDown, ShieldCheck } from 'lucide-react';
+import { useCommerce } from '../context/CommerceContext';
+import type { Product } from '../lib/types';
+import { QuantityControl } from './Primitives';
+
+export function ProductQuickView({ product }: { product: Product }) {
+  const { money, currency, addToBag } = useCommerce();
+  const [finish, setFinish] = useState(product.finishes[0]);
+  const [quantity, setQuantity] = useState(1);
+  return <div className="quick-view-layout"><div className="quick-view-image"><img src={product.image} alt={product.alt} width="1000" height="1000" /><span className="allocation-tag">{product.badge}</span><p>{product.reference}</p></div><div className="quick-view-copy"><p className="product-category">{product.categoryLabel}</p><p className="quick-view-description">{product.description}</p><p className="quick-view-price">{money(product.priceUSD)}<span>{currency}</span></p><label htmlFor="quick-finish" className="field-label">YOUR SELECTED FINISH</label><div className="select-wrap"><select id="quick-finish" value={finish} onChange={event => setFinish(event.target.value)}>{product.finishes.map(option => <option key={option}>{option}</option>)}</select></div><p className="finish-note">Photographed in {product.finishes[0].toLowerCase()}. Alternative finishes are confirmed by the atelier.</p><div className="quick-view-add"><QuantityControl quantity={quantity} max={product.maxQuantity} label={product.title} onChange={next => setQuantity(Math.max(1, next))} /><button type="button" className="button button-dark" onClick={() => addToBag(product.id, finish, quantity)}>Add to bag<ArrowRight size={15} strokeWidth={1.3} /></button></div><details className="product-details" open><summary>Object specifications<ChevronDown size={13} strokeWidth={1.25} /></summary><dl>{product.specs.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}</dl></details><details className="product-details"><summary>Allocation & delivery<ChevronDown size={13} strokeWidth={1.25} /></summary><p>{product.leadTime}. A personal confirmation follows every allocation enquiry. Your object travels by insured secure courier; delivery duties and taxes are confirmed before acceptance.</p></details><p className="quick-provenance"><ShieldCheck size={14} strokeWidth={1.2} />Numbered provenance. Lifelong atelier care.</p></div></div>;
+}

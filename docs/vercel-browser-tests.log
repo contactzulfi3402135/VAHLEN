@@ -1,0 +1,49 @@
+
+> atelier-vahlen@1.0.0 test:e2e
+> playwright test
+
+
+Running 39 tests using 3 workers
+
+  ✓   1 [Desktop] › tests/e2e/flagship.spec.ts:22:1 › cover, eight self-hosted photographs and responsive boundaries (3.1s)
+  ✓   3 [Desktop] › tests/e2e/flagship.spec.ts:34:1 › all collection filters return real matching pieces (4.0s)
+  ✓   2 [Desktop] › tests/e2e/flagship.spec.ts:50:1 › currency converts collection, studio, surcharge and persists on return (5.3s)
+  ✓   4 [Desktop] › tests/e2e/flagship.spec.ts:68:1 › bag additions, quantity, deletion, shipping and converted totals (4.2s)
+  ✓   5 [Desktop] › tests/e2e/flagship.spec.ts:92:1 › quick view transfers the selected finish and quantity to a persistent bag (4.7s)
+  ✓   6 [Desktop] › tests/e2e/flagship.spec.ts:107:1 › bespoke configuration becomes a tailored, downloadable consultation dossier (4.2s)
+  ✓   7 [Desktop] › tests/e2e/flagship.spec.ts:136:1 › allocation checkout calculates delivery and submits without collecting payment (3.4s)
+  ✓   8 [Desktop] › tests/e2e/flagship.spec.ts:151:1 › salon validates email, preserves role and confirms a local registration (3.8s)
+  ✓   9 [Desktop] › tests/e2e/flagship.spec.ts:168:1 › archive editions and provenance lookup are complete, not dummy links (3.8s)
+  ✓  10 [Desktop] › tests/e2e/flagship.spec.ts:187:1 › modal traps focus, closes on Escape and restores focus (2.9s)
+  ✓  11 [Desktop] › tests/e2e/flagship.spec.ts:200:1 › malformed persisted state does not break the storefront (2.7s)
+  -  12 [Desktop] › tests/e2e/flagship.spec.ts:213:1 › mobile and tablet navigation remains fully usable
+  ✓  14 [Tablet] › tests/e2e/flagship.spec.ts:22:1 › cover, eight self-hosted photographs and responsive boundaries (2.2s)
+  ✓  15 [Tablet] › tests/e2e/flagship.spec.ts:34:1 › all collection filters return real matching pieces (2.3s)
+  ✓  13 [Desktop] › tests/e2e/flagship.spec.ts:221:1 › WCAG AA automated audit passes on the page and bag dialog (6.7s)
+  ✓  17 [Tablet] › tests/e2e/flagship.spec.ts:68:1 › bag additions, quantity, deletion, shipping and converted totals (3.2s)
+  ✓  16 [Tablet] › tests/e2e/flagship.spec.ts:50:1 › currency converts collection, studio, surcharge and persists on return (3.5s)
+  ✓  20 [Tablet] › tests/e2e/flagship.spec.ts:136:1 › allocation checkout calculates delivery and submits without collecting payment (3.5s)
+  ✓  19 [Tablet] › tests/e2e/flagship.spec.ts:107:1 › bespoke configuration becomes a tailored, downloadable consultation dossier (3.9s)
+  ✓  18 [Tablet] › tests/e2e/flagship.spec.ts:92:1 › quick view transfers the selected finish and quantity to a persistent bag (4.4s)
+  ✓  21 [Tablet] › tests/e2e/flagship.spec.ts:151:1 › salon validates email, preserves role and confirms a local registration (3.0s)
+  ✓  22 [Tablet] › tests/e2e/flagship.spec.ts:168:1 › archive editions and provenance lookup are complete, not dummy links (2.9s)
+  ✓  23 [Tablet] › tests/e2e/flagship.spec.ts:187:1 › modal traps focus, closes on Escape and restores focus (3.3s)
+  ✓  24 [Tablet] › tests/e2e/flagship.spec.ts:200:1 › malformed persisted state does not break the storefront (2.4s)
+  ✓  25 [Tablet] › tests/e2e/flagship.spec.ts:213:1 › mobile and tablet navigation remains fully usable (2.2s)
+  ✓  27 [Mobile] › tests/e2e/flagship.spec.ts:22:1 › cover, eight self-hosted photographs and responsive boundaries (1.8s)
+  ✓  28 [Mobile] › tests/e2e/flagship.spec.ts:34:1 › all collection filters return real matching pieces (2.2s)
+  ✓  26 [Tablet] › tests/e2e/flagship.spec.ts:221:1 › WCAG AA automated audit passes on the page and bag dialog (6.6s)
+  ✓  29 [Mobile] › tests/e2e/flagship.spec.ts:50:1 › currency converts collection, studio, surcharge and persists on return (3.1s)
+  ✓  30 [Mobile] › tests/e2e/flagship.spec.ts:68:1 › bag additions, quantity, deletion, shipping and converted totals (2.8s)
+  ✓  31 [Mobile] › tests/e2e/flagship.spec.ts:107:1 › bespoke configuration becomes a tailored, downloadable consultation dossier (3.4s)
+  ✓  32 [Mobile] › tests/e2e/flagship.spec.ts:136:1 › allocation checkout calculates delivery and submits without collecting payment (3.3s)
+  ✓  33 [Mobile] › tests/e2e/flagship.spec.ts:92:1 › quick view transfers the selected finish and quantity to a persistent bag (3.9s)
+  ✓  34 [Mobile] › tests/e2e/flagship.spec.ts:151:1 › salon validates email, preserves role and confirms a local registration (3.0s)
+  ✓  35 [Mobile] › tests/e2e/flagship.spec.ts:168:1 › archive editions and provenance lookup are complete, not dummy links (2.8s)
+  ✓  36 [Mobile] › tests/e2e/flagship.spec.ts:187:1 › modal traps focus, closes on Escape and restores focus (3.2s)
+  ✓  37 [Mobile] › tests/e2e/flagship.spec.ts:200:1 › malformed persisted state does not break the storefront (2.1s)
+  ✓  38 [Mobile] › tests/e2e/flagship.spec.ts:213:1 › mobile and tablet navigation remains fully usable (2.0s)
+  ✓  39 [Mobile] › tests/e2e/flagship.spec.ts:221:1 › WCAG AA automated audit passes on the page and bag dialog (2.8s)
+
+  1 skipped
+  38 passed (1.0m)
